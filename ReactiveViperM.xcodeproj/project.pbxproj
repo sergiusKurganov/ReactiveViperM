@@ -15,6 +15,18 @@
 		E37BCFEB21D2709200DE73D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37BCFE921D2709200DE73D5 /* LaunchScreen.storyboard */; };
 		E37BCFF621D2709200DE73D5 /* ReactiveViperMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BCFF521D2709200DE73D5 /* ReactiveViperMTests.swift */; };
 		E37BD00121D2709200DE73D5 /* ReactiveViperMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD00021D2709200DE73D5 /* ReactiveViperMUITests.swift */; };
+		E37BD01E21D2778700DE73D5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01021D2778700DE73D5 /* MainViewController.swift */; };
+		E37BD01F21D2778700DE73D5 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01121D2778700DE73D5 /* MainInteractor.swift */; };
+		E37BD02021D2778700DE73D5 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01221D2778700DE73D5 /* MainPresenter.swift */; };
+		E37BD02121D2778700DE73D5 /* CryptoCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01421D2778700DE73D5 /* CryptoCaseViewController.swift */; };
+		E37BD02221D2778700DE73D5 /* CryptoCaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01521D2778700DE73D5 /* CryptoCaseInteractor.swift */; };
+		E37BD02321D2778700DE73D5 /* CryptoCasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01621D2778700DE73D5 /* CryptoCasePresenter.swift */; };
+		E37BD02421D2778700DE73D5 /* CryptoCaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01721D2778700DE73D5 /* CryptoCaseRouter.swift */; };
+		E37BD02521D2778700DE73D5 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01821D2778700DE73D5 /* MainRouter.swift */; };
+		E37BD02621D2778700DE73D5 /* CryptoMarketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01A21D2778700DE73D5 /* CryptoMarketInteractor.swift */; };
+		E37BD02721D2778700DE73D5 /* CryptoMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01B21D2778700DE73D5 /* CryptoMarketViewController.swift */; };
+		E37BD02821D2778700DE73D5 /* CryptoMarketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01C21D2778700DE73D5 /* CryptoMarketPresenter.swift */; };
+		E37BD02921D2778700DE73D5 /* CryptoMarketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01D21D2778700DE73D5 /* CryptoMarketRouter.swift */; };
 		FC34F5386203F5D4FD6BBC0E /* libPods-ReactiveViperMTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F29304AC9F04DD5465BEF878 /* libPods-ReactiveViperMTests.a */; };
 		FC94B7C50B998D8D099DB0F1 /* libPods-ReactiveViperM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E14FCBBCFC08DA22882D3ED /* libPods-ReactiveViperM.a */; };
 /* End PBXBuildFile section */
@@ -57,6 +69,18 @@
 		E37BCFFC21D2709200DE73D5 /* ReactiveViperMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveViperMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37BD00021D2709200DE73D5 /* ReactiveViperMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViperMUITests.swift; sourceTree = "<group>"; };
 		E37BD00221D2709200DE73D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E37BD01021D2778700DE73D5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E37BD01121D2778700DE73D5 /* MainInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		E37BD01221D2778700DE73D5 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		E37BD01421D2778700DE73D5 /* CryptoCaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCaseViewController.swift; sourceTree = "<group>"; };
+		E37BD01521D2778700DE73D5 /* CryptoCaseInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCaseInteractor.swift; sourceTree = "<group>"; };
+		E37BD01621D2778700DE73D5 /* CryptoCasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCasePresenter.swift; sourceTree = "<group>"; };
+		E37BD01721D2778700DE73D5 /* CryptoCaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCaseRouter.swift; sourceTree = "<group>"; };
+		E37BD01821D2778700DE73D5 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		E37BD01A21D2778700DE73D5 /* CryptoMarketInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoMarketInteractor.swift; sourceTree = "<group>"; };
+		E37BD01B21D2778700DE73D5 /* CryptoMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoMarketViewController.swift; sourceTree = "<group>"; };
+		E37BD01C21D2778700DE73D5 /* CryptoMarketPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoMarketPresenter.swift; sourceTree = "<group>"; };
+		E37BD01D21D2778700DE73D5 /* CryptoMarketRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoMarketRouter.swift; sourceTree = "<group>"; };
 		E6D819DA1E4856EC6F718390 /* libPods-ReactiveViperMUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveViperMUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29304AC9F04DD5465BEF878 /* libPods-ReactiveViperMTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveViperMTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,6 +161,7 @@
 		E37BCFDF21D2709100DE73D5 /* ReactiveViperM */ = {
 			isa = PBXGroup;
 			children = (
+				E37BD00E21D2778700DE73D5 /* Modules */,
 				E37BCFE021D2709100DE73D5 /* AppDelegate.swift */,
 				E37BCFE221D2709100DE73D5 /* ViewController.swift */,
 				E37BCFE421D2709100DE73D5 /* Main.storyboard */,
@@ -163,6 +188,49 @@
 				E37BD00221D2709200DE73D5 /* Info.plist */,
 			);
 			path = ReactiveViperMUITests;
+			sourceTree = "<group>";
+		};
+		E37BD00E21D2778700DE73D5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD00F21D2778700DE73D5 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E37BD00F21D2778700DE73D5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD01021D2778700DE73D5 /* MainViewController.swift */,
+				E37BD01121D2778700DE73D5 /* MainInteractor.swift */,
+				E37BD01221D2778700DE73D5 /* MainPresenter.swift */,
+				E37BD01321D2778700DE73D5 /* CryptoCase */,
+				E37BD01821D2778700DE73D5 /* MainRouter.swift */,
+				E37BD01921D2778700DE73D5 /* CryptoMarket */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E37BD01321D2778700DE73D5 /* CryptoCase */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD01421D2778700DE73D5 /* CryptoCaseViewController.swift */,
+				E37BD01521D2778700DE73D5 /* CryptoCaseInteractor.swift */,
+				E37BD01621D2778700DE73D5 /* CryptoCasePresenter.swift */,
+				E37BD01721D2778700DE73D5 /* CryptoCaseRouter.swift */,
+			);
+			path = CryptoCase;
+			sourceTree = "<group>";
+		};
+		E37BD01921D2778700DE73D5 /* CryptoMarket */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD01A21D2778700DE73D5 /* CryptoMarketInteractor.swift */,
+				E37BD01B21D2778700DE73D5 /* CryptoMarketViewController.swift */,
+				E37BD01C21D2778700DE73D5 /* CryptoMarketPresenter.swift */,
+				E37BD01D21D2778700DE73D5 /* CryptoMarketRouter.swift */,
+			);
+			path = CryptoMarket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,8 +424,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37BD02821D2778700DE73D5 /* CryptoMarketPresenter.swift in Sources */,
+				E37BD02021D2778700DE73D5 /* MainPresenter.swift in Sources */,
+				E37BD02321D2778700DE73D5 /* CryptoCasePresenter.swift in Sources */,
+				E37BD02121D2778700DE73D5 /* CryptoCaseViewController.swift in Sources */,
+				E37BD01E21D2778700DE73D5 /* MainViewController.swift in Sources */,
 				E37BCFE321D2709100DE73D5 /* ViewController.swift in Sources */,
+				E37BD02521D2778700DE73D5 /* MainRouter.swift in Sources */,
+				E37BD02721D2778700DE73D5 /* CryptoMarketViewController.swift in Sources */,
 				E37BCFE121D2709100DE73D5 /* AppDelegate.swift in Sources */,
+				E37BD02921D2778700DE73D5 /* CryptoMarketRouter.swift in Sources */,
+				E37BD02221D2778700DE73D5 /* CryptoCaseInteractor.swift in Sources */,
+				E37BD02421D2778700DE73D5 /* CryptoCaseRouter.swift in Sources */,
+				E37BD02621D2778700DE73D5 /* CryptoMarketInteractor.swift in Sources */,
+				E37BD01F21D2778700DE73D5 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +616,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97524QTF44;
 				INFOPLIST_FILE = ReactiveViperM/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KS.ReactiveViperM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -552,7 +635,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97524QTF44;
 				INFOPLIST_FILE = ReactiveViperM/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KS.ReactiveViperM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -569,7 +655,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97524QTF44;
 				INFOPLIST_FILE = ReactiveViperMTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KS.ReactiveViperMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -587,7 +677,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97524QTF44;
 				INFOPLIST_FILE = ReactiveViperMTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KS.ReactiveViperMTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -604,7 +698,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97524QTF44;
 				INFOPLIST_FILE = ReactiveViperMUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KS.ReactiveViperMUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -621,7 +719,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97524QTF44;
 				INFOPLIST_FILE = ReactiveViperMUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = KS.ReactiveViperMUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
