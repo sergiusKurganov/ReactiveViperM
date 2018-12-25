@@ -1,0 +1,6 @@
+module Pods_ReactiveViperM [system] {
+  umbrella header "Pods-ReactiveViperM-umbrella.h"
+
+  export *
+  module * { export * }
+}
