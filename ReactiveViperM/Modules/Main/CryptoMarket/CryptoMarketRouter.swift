@@ -8,6 +8,16 @@
 
 import Foundation
 
-class CryptoMarketRouter {
+protocol CryptoMarketRouterInputProtocol: class {
+}
+
+protocol CryptoMarketRouterOutputProtocol {
+}
+
+final class CryptoMarketRouter {
     
+    var presenter: CryptoMarketRouterOutputProtocol?
+}
+
+extension CryptoMarketRouter: CryptoMarketRouterInputProtocol {
 }

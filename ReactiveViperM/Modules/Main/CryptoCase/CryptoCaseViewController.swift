@@ -8,23 +8,23 @@
 
 import UIKit
 
-class CryptoCaseViewController: UIViewController {
+protocol CryptoCaseViewControllerInputProtocol: class {
+}
+
+protocol CryptoCaseViewControllerOutputProtocol {
+    func viewDidLoad()
+}
+
+final class CryptoCaseViewController: UIViewController {
+    
+    var presenter: CryptoCaseViewControllerOutputProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        presenter?.viewDidLoad()
+        view.backgroundColor = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 0.5)
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension CryptoCaseViewController: CryptoCaseViewControllerInputProtocol {
 }

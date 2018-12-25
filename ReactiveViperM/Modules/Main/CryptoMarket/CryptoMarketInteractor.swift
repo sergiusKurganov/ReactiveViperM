@@ -8,6 +8,17 @@
 
 import Foundation
 
-class CryptoMarketInteractor {
+protocol CryptoMarketInteractorInputProtocol: class {
+}
+
+protocol CryptoMarketInteractorOutputProtocol {
+}
+
+final class CryptoMarketInteractor {
     
+    var presenter: CryptoMarketInteractorOutputProtocol?
+    
+}
+
+extension CryptoMarketInteractor: CryptoMarketInteractorInputProtocol {
 }

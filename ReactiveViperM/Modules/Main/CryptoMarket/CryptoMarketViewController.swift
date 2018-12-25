@@ -8,23 +8,23 @@
 
 import UIKit
 
-class CryptoMarketViewController: UIViewController {
+protocol CryptoMarketViewControllerInputProtocol: class {
+}
+
+protocol CryptoMarketViewControllerOutputProtocol {
+    func viewDidLoad()
+}
+
+final class CryptoMarketViewController: UIViewController {
+    
+    var presenter: CryptoMarketViewControllerOutputProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        presenter?.viewDidLoad()
+        view.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 0.5)
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension CryptoMarketViewController: CryptoMarketViewControllerInputProtocol {
 }

@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol MainRouterInputProtocol {
+protocol MainRouterInputProtocol: class {
 }
 
 protocol MainRouterOutputProtocol {
 }
 
 final class MainRouter {
-    private var presenter: MainRouterOutputProtocol!
+    var presenter: MainRouterOutputProtocol?
 }
 
 extension MainRouter: MainRouterInputProtocol {

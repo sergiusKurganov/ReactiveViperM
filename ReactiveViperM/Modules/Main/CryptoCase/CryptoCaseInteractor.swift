@@ -8,6 +8,17 @@
 
 import Foundation
 
-class CryptoCaseInteractor {
+protocol CryptoCaseInteractorInputProtocol: class {
+}
+
+protocol CryptoCaseInteractorOutputProtocol {
+}
+
+final class CryptoCaseInteractor {
     
+    var presenter: CryptoCaseInteractorOutputProtocol?
+    
+}
+
+extension CryptoCaseInteractor: CryptoCaseInteractorInputProtocol {
 }

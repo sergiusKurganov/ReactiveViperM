@@ -8,15 +8,14 @@
 
 import Foundation
 
-
-protocol MainInteractorInputProtocol {
+protocol MainInteractorInputProtocol: class {
 }
 
 protocol MainInteractorOutputProtocol {
 }
 
 final class MainInteractor {
-    private var presenter: MainInteractorOutputProtocol!
+    var presenter: MainInteractorOutputProtocol!
 }
 
 extension MainInteractor: MainInteractorInputProtocol {

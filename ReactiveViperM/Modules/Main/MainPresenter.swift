@@ -8,13 +8,16 @@
 
 import Foundation
 
-class MainPresenter {
-    var view: MainViewControllerInputProtocol!
-    var interactor: MainInteractorInputProtocol!
-    var router: MainRouterInputProtocol!
+final class MainPresenter {
+    weak var view: MainViewControllerInputProtocol?
+    weak var interactor: MainInteractorInputProtocol?
+    weak var router: MainRouterInputProtocol?
 }
 
 extension MainPresenter: MainViewControllerOutputProtocol {
+    func viewDidLoad() {
+        view?.setupView()
+    }
 }
 
 extension MainPresenter: MainInteractorOutputProtocol {

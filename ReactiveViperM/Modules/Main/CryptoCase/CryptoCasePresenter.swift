@@ -8,6 +8,37 @@
 
 import Foundation
 
-class CryptoCasePresenter {
+protocol CryptoCaseModuleOutputProtocol: class {
+}
 
+protocol CryptoCaseModuleInputProtocol {
+    func configure(parentModule: CryptoCaseModuleOutputProtocol?)
+}
+
+final class CryptoCasePresenter {
+    
+    weak var parentModule: CryptoCaseModuleOutputProtocol?
+    
+    weak var view: CryptoCaseViewControllerInputProtocol?
+    weak var interactor: CryptoCaseInteractorInputProtocol?
+    weak var router: CryptoCaseRouterInputProtocol?
+    
+}
+
+extension CryptoCasePresenter: CryptoCaseViewControllerOutputProtocol {
+    func viewDidLoad() {
+    }
+}
+
+extension CryptoCasePresenter: CryptoCaseInteractorOutputProtocol {
+}
+
+extension CryptoCasePresenter: CryptoCaseRouterOutputProtocol {
+}
+
+extension CryptoCasePresenter: CryptoCaseModuleInputProtocol {
+    func configure(parentModule: CryptoCaseModuleOutputProtocol?) {
+        guard let module = parentModule else { return }
+        self.parentModule = module
+    }
 }

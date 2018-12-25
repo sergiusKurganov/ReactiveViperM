@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let mainModule = ModuleFactory.getModule(.main) as! MainConfigurator
+        
+        let nc = UINavigationController()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = nc
+        nc.pushViewController(mainModule.view, animated: true)
+        
         return true
     }
 

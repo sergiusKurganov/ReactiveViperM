@@ -9,10 +9,7 @@
 /* Begin PBXBuildFile section */
 		35EF5BD0ADC31D0C523713F2 /* libPods-ReactiveViperMUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D819DA1E4856EC6F718390 /* libPods-ReactiveViperMUITests.a */; };
 		E37BCFE121D2709100DE73D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BCFE021D2709100DE73D5 /* AppDelegate.swift */; };
-		E37BCFE321D2709100DE73D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BCFE221D2709100DE73D5 /* ViewController.swift */; };
-		E37BCFE621D2709100DE73D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37BCFE421D2709100DE73D5 /* Main.storyboard */; };
 		E37BCFE821D2709200DE73D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37BCFE721D2709200DE73D5 /* Assets.xcassets */; };
-		E37BCFEB21D2709200DE73D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37BCFE921D2709200DE73D5 /* LaunchScreen.storyboard */; };
 		E37BCFF621D2709200DE73D5 /* ReactiveViperMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BCFF521D2709200DE73D5 /* ReactiveViperMTests.swift */; };
 		E37BD00121D2709200DE73D5 /* ReactiveViperMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD00021D2709200DE73D5 /* ReactiveViperMUITests.swift */; };
 		E37BD01E21D2778700DE73D5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01021D2778700DE73D5 /* MainViewController.swift */; };
@@ -27,6 +24,11 @@
 		E37BD02721D2778700DE73D5 /* CryptoMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01B21D2778700DE73D5 /* CryptoMarketViewController.swift */; };
 		E37BD02821D2778700DE73D5 /* CryptoMarketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01C21D2778700DE73D5 /* CryptoMarketPresenter.swift */; };
 		E37BD02921D2778700DE73D5 /* CryptoMarketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD01D21D2778700DE73D5 /* CryptoMarketRouter.swift */; };
+		E37BD02B21D27E7000DE73D5 /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD02A21D27E7000DE73D5 /* MainConfigurator.swift */; };
+		E37BD02D21D27F9600DE73D5 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD02C21D27F9600DE73D5 /* ModuleFactory.swift */; };
+		E37BD03121D288DE00DE73D5 /* CryptoCaseConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD03021D288DE00DE73D5 /* CryptoCaseConfigurator.swift */; };
+		E37BD03321D28E0B00DE73D5 /* CryptoMarketConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD03221D28E0B00DE73D5 /* CryptoMarketConfigurator.swift */; };
+		E37BD03721D297D900DE73D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37BD03521D297D900DE73D5 /* LaunchScreen.storyboard */; };
 		FC34F5386203F5D4FD6BBC0E /* libPods-ReactiveViperMTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F29304AC9F04DD5465BEF878 /* libPods-ReactiveViperMTests.a */; };
 		FC94B7C50B998D8D099DB0F1 /* libPods-ReactiveViperM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E14FCBBCFC08DA22882D3ED /* libPods-ReactiveViperM.a */; };
 /* End PBXBuildFile section */
@@ -58,10 +60,7 @@
 		CA275211F1A5E3722653D1A5 /* Pods-ReactiveViperMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveViperMUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveViperMUITests/Pods-ReactiveViperMUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E37BCFDD21D2709100DE73D5 /* ReactiveViperM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveViperM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37BCFE021D2709100DE73D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E37BCFE221D2709100DE73D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E37BCFE521D2709100DE73D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E37BCFE721D2709200DE73D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E37BCFEA21D2709200DE73D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E37BCFEC21D2709200DE73D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E37BCFF121D2709200DE73D5 /* ReactiveViperMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveViperMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37BCFF521D2709200DE73D5 /* ReactiveViperMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViperMTests.swift; sourceTree = "<group>"; };
@@ -81,6 +80,11 @@
 		E37BD01B21D2778700DE73D5 /* CryptoMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoMarketViewController.swift; sourceTree = "<group>"; };
 		E37BD01C21D2778700DE73D5 /* CryptoMarketPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoMarketPresenter.swift; sourceTree = "<group>"; };
 		E37BD01D21D2778700DE73D5 /* CryptoMarketRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoMarketRouter.swift; sourceTree = "<group>"; };
+		E37BD02A21D27E7000DE73D5 /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		E37BD02C21D27F9600DE73D5 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		E37BD03021D288DE00DE73D5 /* CryptoCaseConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCaseConfigurator.swift; sourceTree = "<group>"; };
+		E37BD03221D28E0B00DE73D5 /* CryptoMarketConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoMarketConfigurator.swift; sourceTree = "<group>"; };
+		E37BD03521D297D900DE73D5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6D819DA1E4856EC6F718390 /* libPods-ReactiveViperMUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveViperMUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29304AC9F04DD5465BEF878 /* libPods-ReactiveViperMTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveViperMTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -161,12 +165,11 @@
 		E37BCFDF21D2709100DE73D5 /* ReactiveViperM */ = {
 			isa = PBXGroup;
 			children = (
-				E37BD00E21D2778700DE73D5 /* Modules */,
 				E37BCFE021D2709100DE73D5 /* AppDelegate.swift */,
-				E37BCFE221D2709100DE73D5 /* ViewController.swift */,
-				E37BCFE421D2709100DE73D5 /* Main.storyboard */,
+				E37BD02C21D27F9600DE73D5 /* ModuleFactory.swift */,
+				E37BD00E21D2778700DE73D5 /* Modules */,
 				E37BCFE721D2709200DE73D5 /* Assets.xcassets */,
-				E37BCFE921D2709200DE73D5 /* LaunchScreen.storyboard */,
+				E37BD03521D297D900DE73D5 /* LaunchScreen.storyboard */,
 				E37BCFEC21D2709200DE73D5 /* Info.plist */,
 			);
 			path = ReactiveViperM;
@@ -201,11 +204,12 @@
 		E37BD00F21D2778700DE73D5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E37BD02A21D27E7000DE73D5 /* MainConfigurator.swift */,
 				E37BD01021D2778700DE73D5 /* MainViewController.swift */,
-				E37BD01121D2778700DE73D5 /* MainInteractor.swift */,
 				E37BD01221D2778700DE73D5 /* MainPresenter.swift */,
-				E37BD01321D2778700DE73D5 /* CryptoCase */,
+				E37BD01121D2778700DE73D5 /* MainInteractor.swift */,
 				E37BD01821D2778700DE73D5 /* MainRouter.swift */,
+				E37BD01321D2778700DE73D5 /* CryptoCase */,
 				E37BD01921D2778700DE73D5 /* CryptoMarket */,
 			);
 			path = Main;
@@ -214,9 +218,10 @@
 		E37BD01321D2778700DE73D5 /* CryptoCase */ = {
 			isa = PBXGroup;
 			children = (
+				E37BD03021D288DE00DE73D5 /* CryptoCaseConfigurator.swift */,
 				E37BD01421D2778700DE73D5 /* CryptoCaseViewController.swift */,
-				E37BD01521D2778700DE73D5 /* CryptoCaseInteractor.swift */,
 				E37BD01621D2778700DE73D5 /* CryptoCasePresenter.swift */,
+				E37BD01521D2778700DE73D5 /* CryptoCaseInteractor.swift */,
 				E37BD01721D2778700DE73D5 /* CryptoCaseRouter.swift */,
 			);
 			path = CryptoCase;
@@ -225,6 +230,7 @@
 		E37BD01921D2778700DE73D5 /* CryptoMarket */ = {
 			isa = PBXGroup;
 			children = (
+				E37BD03221D28E0B00DE73D5 /* CryptoMarketConfigurator.swift */,
 				E37BD01A21D2778700DE73D5 /* CryptoMarketInteractor.swift */,
 				E37BD01B21D2778700DE73D5 /* CryptoMarketViewController.swift */,
 				E37BD01C21D2778700DE73D5 /* CryptoMarketPresenter.swift */,
@@ -340,9 +346,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E37BCFEB21D2709200DE73D5 /* LaunchScreen.storyboard in Resources */,
+				E37BD03721D297D900DE73D5 /* LaunchScreen.storyboard in Resources */,
 				E37BCFE821D2709200DE73D5 /* Assets.xcassets in Resources */,
-				E37BCFE621D2709100DE73D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,17 +432,20 @@
 				E37BD02821D2778700DE73D5 /* CryptoMarketPresenter.swift in Sources */,
 				E37BD02021D2778700DE73D5 /* MainPresenter.swift in Sources */,
 				E37BD02321D2778700DE73D5 /* CryptoCasePresenter.swift in Sources */,
+				E37BD03121D288DE00DE73D5 /* CryptoCaseConfigurator.swift in Sources */,
 				E37BD02121D2778700DE73D5 /* CryptoCaseViewController.swift in Sources */,
 				E37BD01E21D2778700DE73D5 /* MainViewController.swift in Sources */,
-				E37BCFE321D2709100DE73D5 /* ViewController.swift in Sources */,
 				E37BD02521D2778700DE73D5 /* MainRouter.swift in Sources */,
 				E37BD02721D2778700DE73D5 /* CryptoMarketViewController.swift in Sources */,
 				E37BCFE121D2709100DE73D5 /* AppDelegate.swift in Sources */,
 				E37BD02921D2778700DE73D5 /* CryptoMarketRouter.swift in Sources */,
 				E37BD02221D2778700DE73D5 /* CryptoCaseInteractor.swift in Sources */,
 				E37BD02421D2778700DE73D5 /* CryptoCaseRouter.swift in Sources */,
+				E37BD02D21D27F9600DE73D5 /* ModuleFactory.swift in Sources */,
 				E37BD02621D2778700DE73D5 /* CryptoMarketInteractor.swift in Sources */,
+				E37BD03321D28E0B00DE73D5 /* CryptoMarketConfigurator.swift in Sources */,
 				E37BD01F21D2778700DE73D5 /* MainInteractor.swift in Sources */,
+				E37BD02B21D27E7000DE73D5 /* MainConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,25 +479,6 @@
 			targetProxy = E37BCFFD21D2709200DE73D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E37BCFE421D2709100DE73D5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E37BCFE521D2709100DE73D5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E37BCFE921D2709200DE73D5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E37BCFEA21D2709200DE73D5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E37BD00321D2709200DE73D5 /* Debug */ = {

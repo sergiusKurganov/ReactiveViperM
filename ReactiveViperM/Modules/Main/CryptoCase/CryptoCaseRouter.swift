@@ -8,6 +8,18 @@
 
 import Foundation
 
-class CryptoCaseRouter {
+protocol CryptoCaseRouterInputProtocol: class {
+}
+
+protocol CryptoCaseRouterOutputProtocol {
+}
+
+final class CryptoCaseRouter {
+    
+    var presenter: CryptoCaseRouterOutputProtocol?
     
 }
+
+extension CryptoCaseRouter: CryptoCaseRouterInputProtocol {
+}
+
