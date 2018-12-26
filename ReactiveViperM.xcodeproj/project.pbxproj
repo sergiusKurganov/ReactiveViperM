@@ -29,6 +29,12 @@
 		E37BD03121D288DE00DE73D5 /* CryptoCaseConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD03021D288DE00DE73D5 /* CryptoCaseConfigurator.swift */; };
 		E37BD03321D28E0B00DE73D5 /* CryptoMarketConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD03221D28E0B00DE73D5 /* CryptoMarketConfigurator.swift */; };
 		E37BD03721D297D900DE73D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37BD03521D297D900DE73D5 /* LaunchScreen.storyboard */; };
+		E37BD03B21D2B5BE00DE73D5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD03A21D2B5BE00DE73D5 /* DataManager.swift */; };
+		E37BD03F21D2C57C00DE73D5 /* MarketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD03E21D2C57C00DE73D5 /* MarketRequest.swift */; };
+		E37BD04221D2C7E200DE73D5 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD04121D2C7E200DE73D5 /* Market.swift */; };
+		E37BD04921D2E3D400DE73D5 /* MarketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD04721D2E3D400DE73D5 /* MarketCollectionViewCell.swift */; };
+		E37BD04A21D2E3D400DE73D5 /* MarketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37BD04821D2E3D400DE73D5 /* MarketCollectionViewCell.xib */; };
+		E37BD04C21D2E91A00DE73D5 /* UIFont+AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD04B21D2E91A00DE73D5 /* UIFont+AppFont.swift */; };
 		FC34F5386203F5D4FD6BBC0E /* libPods-ReactiveViperMTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F29304AC9F04DD5465BEF878 /* libPods-ReactiveViperMTests.a */; };
 		FC94B7C50B998D8D099DB0F1 /* libPods-ReactiveViperM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E14FCBBCFC08DA22882D3ED /* libPods-ReactiveViperM.a */; };
 /* End PBXBuildFile section */
@@ -85,6 +91,12 @@
 		E37BD03021D288DE00DE73D5 /* CryptoCaseConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCaseConfigurator.swift; sourceTree = "<group>"; };
 		E37BD03221D28E0B00DE73D5 /* CryptoMarketConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoMarketConfigurator.swift; sourceTree = "<group>"; };
 		E37BD03521D297D900DE73D5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E37BD03A21D2B5BE00DE73D5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E37BD03E21D2C57C00DE73D5 /* MarketRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketRequest.swift; sourceTree = "<group>"; };
+		E37BD04121D2C7E200DE73D5 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		E37BD04721D2E3D400DE73D5 /* MarketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCollectionViewCell.swift; sourceTree = "<group>"; };
+		E37BD04821D2E3D400DE73D5 /* MarketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketCollectionViewCell.xib; sourceTree = "<group>"; };
+		E37BD04B21D2E91A00DE73D5 /* UIFont+AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+AppFont.swift"; sourceTree = "<group>"; };
 		E6D819DA1E4856EC6F718390 /* libPods-ReactiveViperMUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveViperMUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29304AC9F04DD5465BEF878 /* libPods-ReactiveViperMTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveViperMTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,10 +179,12 @@
 			children = (
 				E37BCFE021D2709100DE73D5 /* AppDelegate.swift */,
 				E37BD02C21D27F9600DE73D5 /* ModuleFactory.swift */,
+				E37BD03821D2B58B00DE73D5 /* Core */,
 				E37BD00E21D2778700DE73D5 /* Modules */,
 				E37BCFE721D2709200DE73D5 /* Assets.xcassets */,
 				E37BD03521D297D900DE73D5 /* LaunchScreen.storyboard */,
 				E37BCFEC21D2709200DE73D5 /* Info.plist */,
+				E37BD04B21D2E91A00DE73D5 /* UIFont+AppFont.swift */,
 			);
 			path = ReactiveViperM;
 			sourceTree = "<group>";
@@ -230,6 +244,7 @@
 		E37BD01921D2778700DE73D5 /* CryptoMarket */ = {
 			isa = PBXGroup;
 			children = (
+				E37BD04521D2E36600DE73D5 /* CollectionView */,
 				E37BD03221D28E0B00DE73D5 /* CryptoMarketConfigurator.swift */,
 				E37BD01A21D2778700DE73D5 /* CryptoMarketInteractor.swift */,
 				E37BD01B21D2778700DE73D5 /* CryptoMarketViewController.swift */,
@@ -237,6 +252,65 @@
 				E37BD01D21D2778700DE73D5 /* CryptoMarketRouter.swift */,
 			);
 			path = CryptoMarket;
+			sourceTree = "<group>";
+		};
+		E37BD03821D2B58B00DE73D5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD04021D2C7CD00DE73D5 /* Model */,
+				E37BD03D21D2C22900DE73D5 /* Response */,
+				E37BD03C21D2C21300DE73D5 /* Request */,
+				E37BD03921D2B5A700DE73D5 /* Net */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E37BD03921D2B5A700DE73D5 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD03A21D2B5BE00DE73D5 /* DataManager.swift */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		E37BD03C21D2C21300DE73D5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		E37BD03D21D2C22900DE73D5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD03E21D2C57C00DE73D5 /* MarketRequest.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		E37BD04021D2C7CD00DE73D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD04121D2C7E200DE73D5 /* Market.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E37BD04521D2E36600DE73D5 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD04621D2E37000DE73D5 /* Cell */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		E37BD04621D2E37000DE73D5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD04721D2E3D400DE73D5 /* MarketCollectionViewCell.swift */,
+				E37BD04821D2E3D400DE73D5 /* MarketCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37BD04A21D2E3D400DE73D5 /* MarketCollectionViewCell.xib in Resources */,
 				E37BD03721D297D900DE73D5 /* LaunchScreen.storyboard in Resources */,
 				E37BCFE821D2709200DE73D5 /* Assets.xcassets in Resources */,
 			);
@@ -432,20 +507,25 @@
 				E37BD02821D2778700DE73D5 /* CryptoMarketPresenter.swift in Sources */,
 				E37BD02021D2778700DE73D5 /* MainPresenter.swift in Sources */,
 				E37BD02321D2778700DE73D5 /* CryptoCasePresenter.swift in Sources */,
+				E37BD03F21D2C57C00DE73D5 /* MarketRequest.swift in Sources */,
 				E37BD03121D288DE00DE73D5 /* CryptoCaseConfigurator.swift in Sources */,
 				E37BD02121D2778700DE73D5 /* CryptoCaseViewController.swift in Sources */,
 				E37BD01E21D2778700DE73D5 /* MainViewController.swift in Sources */,
 				E37BD02521D2778700DE73D5 /* MainRouter.swift in Sources */,
+				E37BD03B21D2B5BE00DE73D5 /* DataManager.swift in Sources */,
 				E37BD02721D2778700DE73D5 /* CryptoMarketViewController.swift in Sources */,
 				E37BCFE121D2709100DE73D5 /* AppDelegate.swift in Sources */,
 				E37BD02921D2778700DE73D5 /* CryptoMarketRouter.swift in Sources */,
 				E37BD02221D2778700DE73D5 /* CryptoCaseInteractor.swift in Sources */,
 				E37BD02421D2778700DE73D5 /* CryptoCaseRouter.swift in Sources */,
 				E37BD02D21D27F9600DE73D5 /* ModuleFactory.swift in Sources */,
+				E37BD04C21D2E91A00DE73D5 /* UIFont+AppFont.swift in Sources */,
 				E37BD02621D2778700DE73D5 /* CryptoMarketInteractor.swift in Sources */,
+				E37BD04921D2E3D400DE73D5 /* MarketCollectionViewCell.swift in Sources */,
 				E37BD03321D28E0B00DE73D5 /* CryptoMarketConfigurator.swift in Sources */,
 				E37BD01F21D2778700DE73D5 /* MainInteractor.swift in Sources */,
 				E37BD02B21D27E7000DE73D5 /* MainConfigurator.swift in Sources */,
+				E37BD04221D2C7E200DE73D5 /* Market.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
