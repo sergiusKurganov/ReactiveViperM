@@ -9,6 +9,9 @@
 import UIKit
 
 protocol CryptoCaseViewControllerInputProtocol: class {
+    func setupView()
+    
+    var caseMarkets: [Market] { get set }
 }
 
 protocol CryptoCaseViewControllerOutputProtocol {
@@ -18,6 +21,19 @@ protocol CryptoCaseViewControllerOutputProtocol {
 final class CryptoCaseViewController: UIViewController {
     
     var presenter: CryptoCaseViewControllerOutputProtocol?
+    var caseMarkets = [Market]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    private var tableView = UITableView(frame: .zero)
+    private var coinCaseIdentifier = "CoinCaseIdentifier"
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,4 +43,46 @@ final class CryptoCaseViewController: UIViewController {
 }
 
 extension CryptoCaseViewController: CryptoCaseViewControllerInputProtocol {
+    func setupView() {
+        cnofigureInterface()
+    }
+}
+
+private extension CryptoCaseViewController {
+    private func cnofigureInterface() {
+        setTableView()
+    }
+    
+    private func setTableView() {
+        view.addSubview(tableView)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        
+        tableView.register(UINib(nibName: "CoinCaseTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: coinCaseIdentifier)
+    }
+}
+
+extension CryptoCaseViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return caseMarkets.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: coinCaseIdentifier, for: indexPath) as! CoinCaseTableViewCell
+        cell.setData(coin: caseMarkets[indexPath.row])
+        return cell
+    }
+}
+
+extension CryptoCaseViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

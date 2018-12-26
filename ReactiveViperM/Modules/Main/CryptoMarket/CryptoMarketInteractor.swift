@@ -10,7 +10,9 @@ import Foundation
 import RxSwift
 
 protocol CryptoMarketInteractorInputProtocol: class {
-    var market: Variable<[Market]>?  { get set }
+    func saveBaseId(_ baseId: String)
+    
+    var markets: Variable<[Market]>?  { get set }
 }
 
 protocol CryptoMarketInteractorOutputProtocol {
@@ -20,9 +22,9 @@ protocol CryptoMarketInteractorOutputProtocol {
 final class CryptoMarketInteractor {
     
     var presenter: CryptoMarketInteractorOutputProtocol?
-    var market: Variable<[Market]>? {
+    var markets: Variable<[Market]>? {
         didSet {
-            market?.asObservable().subscribe(onNext: { [weak self] markets in
+            markets?.asObservable().subscribe(onNext: { [weak self] markets in
                 guard let self = self else { return }
                 self.presenter?.updateView(with: markets)
                 }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
@@ -33,4 +35,13 @@ final class CryptoMarketInteractor {
 }
 
 extension CryptoMarketInteractor: CryptoMarketInteractorInputProtocol {
+    func saveBaseId(_ baseId: String) {
+        var ids = [String]()
+        if let baseIds = UserSettings.getBaseIds() {
+            guard !baseIds.contains(baseId) else { return }
+            ids = baseIds
+        }
+        ids.append(baseId)
+        UserSettings.setBaseIds(baseIds: ids)
+    }
 }

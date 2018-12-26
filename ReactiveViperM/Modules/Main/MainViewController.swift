@@ -15,6 +15,8 @@ protocol MainViewControllerInputProtocol: class {
 protocol MainViewControllerOutputProtocol {
     func viewDidLoad()
     func configureMarketModulePresenter(_ presenter: CryptoMarketModuleInputProtocol)
+    func configureCaseModulePresenter(_ presenter: CryptoCaseModuleInputProtocol)
+    func currencySegmentControlDidSelectCurrency(_ currency: CurrencyType)
 }
 
 final class MainViewController: UIViewController {
@@ -23,40 +25,71 @@ final class MainViewController: UIViewController {
     
     private var cryptoMarketView = UIView()
     private var cryptoCaseView = UIView()
+    private var currencySegmentControl = UISegmentedControl()
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        cryptoMarketView.frame = CGRect(x: 0, y: 65, width: view.frame.width, height: 256)
-        cryptoCaseView.frame = CGRect(x: 0, y: view.frame.height / 2, width: view.frame.width, height: view.frame.height / 2)
+        currencySegmentControl.frame = CGRect(x: 0,
+                                              y: 65,
+                                              width: view.frame.width,
+                                              height: 50)
+        cryptoMarketView.frame = CGRect(x: 0,
+                                        y: currencySegmentControl.frame.maxY,
+                                        width: view.frame.width, height: 256)
+        cryptoCaseView.frame = CGRect(x: 0,
+                                      y: cryptoMarketView.frame.maxY,
+                                      width: view.frame.width,
+                                      height: view.frame.height - 65 - 256 - 50)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .white
         presenter?.viewDidLoad()
     }
 }
 
 extension MainViewController: MainViewControllerInputProtocol {
     func setupView() {
-        cryptoMarketView = cryptoMarket()
+        cryptoMarketView = setCryptoMarketModule()
         view.addSubview(cryptoMarketView)
-        cryptoCaseView = setCryptoCase()
+        cryptoCaseView = setCryptoCaseModule()
         view.addSubview(cryptoCaseView)
+        
+        setCurrencySegmentControl()
     }
 }
 
 extension MainViewController {
-    private func cryptoMarket() -> UIView {
+    private func setCryptoMarketModule() -> UIView {
         let cryptoMarket = ModuleFactory.getModule(.cryptoMarket) as! CryptoMarketConfigurator
         addChild(cryptoMarket.view)
         presenter?.configureMarketModulePresenter(cryptoMarket.presenter)
         return cryptoMarket.view.view
     }
     
-    private func setCryptoCase() -> UIView {
+    private func setCryptoCaseModule() -> UIView {
         let cryptoCase = ModuleFactory.getModule(.cryptoCase) as! CryptoCaseConfigurator
         addChild(cryptoCase.view)
+        presenter?.configureCaseModulePresenter(cryptoCase.presenter)
         return cryptoCase.view.view
+    }
+    
+    private func setCurrencySegmentControl() {
+        view.addSubview(currencySegmentControl)
+        currencySegmentControl.insertSegment(withTitle: "$", at: 0, animated: true)
+        currencySegmentControl.insertSegment(withTitle: "₽", at: 1, animated: true)
+        currencySegmentControl.insertSegment(withTitle: "€", at: 2, animated: true)
+        currencySegmentControl.selectedSegmentIndex = 0
+        currencySegmentControl.addTarget(self, action: #selector(changeCurrency(sender:)), for: .valueChanged)
+    }
+    
+    @objc private func changeCurrency(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0: presenter?.currencySegmentControlDidSelectCurrency(.dollar)
+        case 1: presenter?.currencySegmentControlDidSelectCurrency(.ruble)
+        case 2: presenter?.currencySegmentControlDidSelectCurrency(.euro)
+        default: break
+        }
     }
 }

@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol CryptoCaseModuleOutputProtocol: class {
 }
 
 protocol CryptoCaseModuleInputProtocol {
-    func configure(parentModule: CryptoCaseModuleOutputProtocol?)
+    func configure(parentModule: CryptoCaseModuleOutputProtocol?,
+                   caseMarket: Variable<[Market]>)
 }
 
 final class CryptoCasePresenter {
@@ -21,24 +23,30 @@ final class CryptoCasePresenter {
     
     weak var view: CryptoCaseViewControllerInputProtocol?
     var interactor: CryptoCaseInteractorInputProtocol?
-    weak var router: CryptoCaseRouterInputProtocol?
+    var router: CryptoCaseRouterInputProtocol?
     
 }
 
 extension CryptoCasePresenter: CryptoCaseViewControllerOutputProtocol {
     func viewDidLoad() {
+        view?.setupView()
     }
 }
 
 extension CryptoCasePresenter: CryptoCaseInteractorOutputProtocol {
+    func updateView(with caseMarkets: [Market]) {
+        view?.caseMarkets = caseMarkets
+    }
 }
 
 extension CryptoCasePresenter: CryptoCaseRouterOutputProtocol {
 }
 
 extension CryptoCasePresenter: CryptoCaseModuleInputProtocol {
-    func configure(parentModule: CryptoCaseModuleOutputProtocol?) {
+    func configure(parentModule: CryptoCaseModuleOutputProtocol?,
+                   caseMarket: Variable<[Market]>) {
         guard let module = parentModule else { return }
         self.parentModule = module
+        self.interactor?.caseMarkets = caseMarket
     }
 }
