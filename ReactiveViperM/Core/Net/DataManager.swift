@@ -14,6 +14,9 @@ class DataManager {
     
     private init() {}
     static let shared = DataManager()
+    
+    var currentCurrency: CurrencyType = .ruble
+    
     func getCryptoMarket(with parameters: Parameters, success: (([Market]) -> Void)? = nil,
                          failure: ((String) -> Void)? = nil) {
         Alamofire.request(URL(string: "https://api.coincap.io/v2/markets")!,

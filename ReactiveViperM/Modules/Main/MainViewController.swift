@@ -15,6 +15,7 @@ protocol MainViewControllerInputProtocol: class {
 protocol MainViewControllerOutputProtocol {
     func viewDidLoad()
     func configureMarketModulePresenter(_ presenter: CryptoMarketModuleInputProtocol)
+    func configureCaseModulePresenter(_ presenter: CryptoCaseModuleInputProtocol)
     func currencySegmentControlDidSelectCurrency(_ currency: CurrencyType)
 }
 
@@ -38,7 +39,7 @@ final class MainViewController: UIViewController {
         cryptoCaseView.frame = CGRect(x: 0,
                                       y: cryptoMarketView.frame.maxY,
                                       width: view.frame.width,
-                                      height: view.frame.height / 2)
+                                      height: view.frame.height - 65 - 256 - 50)
     }
     
     override func viewDidLoad() {
@@ -70,6 +71,7 @@ extension MainViewController {
     private func setCryptoCaseModule() -> UIView {
         let cryptoCase = ModuleFactory.getModule(.cryptoCase) as! CryptoCaseConfigurator
         addChild(cryptoCase.view)
+        presenter?.configureCaseModulePresenter(cryptoCase.presenter)
         return cryptoCase.view.view
     }
     

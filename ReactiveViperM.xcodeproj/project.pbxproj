@@ -37,6 +37,8 @@
 		E37BD04C21D2E91A00DE73D5 /* UIFont+AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD04B21D2E91A00DE73D5 /* UIFont+AppFont.swift */; };
 		E37BD04E21D3A01800DE73D5 /* CurrencyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD04D21D3A01800DE73D5 /* CurrencyBuilder.swift */; };
 		E37BD05021D3ABAE00DE73D5 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD04F21D3ABAE00DE73D5 /* UserSettings.swift */; };
+		E37BD05A21D41B4800DE73D5 /* CoinCaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37BD05821D41B4800DE73D5 /* CoinCaseTableViewCell.xib */; };
+		E37BD05B21D41B4800DE73D5 /* CoinCaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BD05921D41B4800DE73D5 /* CoinCaseTableViewCell.swift */; };
 		FC34F5386203F5D4FD6BBC0E /* libPods-ReactiveViperMTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F29304AC9F04DD5465BEF878 /* libPods-ReactiveViperMTests.a */; };
 		FC94B7C50B998D8D099DB0F1 /* libPods-ReactiveViperM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E14FCBBCFC08DA22882D3ED /* libPods-ReactiveViperM.a */; };
 /* End PBXBuildFile section */
@@ -101,6 +103,8 @@
 		E37BD04B21D2E91A00DE73D5 /* UIFont+AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+AppFont.swift"; sourceTree = "<group>"; };
 		E37BD04D21D3A01800DE73D5 /* CurrencyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyBuilder.swift; sourceTree = "<group>"; };
 		E37BD04F21D3ABAE00DE73D5 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		E37BD05821D41B4800DE73D5 /* CoinCaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CoinCaseTableViewCell.xib; path = ../../../../../../../CoinCaseTableViewCell.xib; sourceTree = "<group>"; };
+		E37BD05921D41B4800DE73D5 /* CoinCaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoinCaseTableViewCell.swift; path = ../../../../../../../CoinCaseTableViewCell.swift; sourceTree = "<group>"; };
 		E6D819DA1E4856EC6F718390 /* libPods-ReactiveViperMUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveViperMUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29304AC9F04DD5465BEF878 /* libPods-ReactiveViperMTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveViperMTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -236,6 +240,7 @@
 		E37BD01321D2778700DE73D5 /* CryptoCase */ = {
 			isa = PBXGroup;
 			children = (
+				E37BD05621D4116000DE73D5 /* Table */,
 				E37BD03021D288DE00DE73D5 /* CryptoCaseConfigurator.swift */,
 				E37BD01421D2778700DE73D5 /* CryptoCaseViewController.swift */,
 				E37BD01621D2778700DE73D5 /* CryptoCasePresenter.swift */,
@@ -325,6 +330,23 @@
 				E37BD04F21D3ABAE00DE73D5 /* UserSettings.swift */,
 			);
 			path = Local;
+			sourceTree = "<group>";
+		};
+		E37BD05621D4116000DE73D5 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD05721D4116900DE73D5 /* Cell */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		E37BD05721D4116900DE73D5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E37BD05921D41B4800DE73D5 /* CoinCaseTableViewCell.swift */,
+				E37BD05821D41B4800DE73D5 /* CoinCaseTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +458,7 @@
 			files = (
 				E37BD04A21D2E3D400DE73D5 /* MarketCollectionViewCell.xib in Resources */,
 				E37BD03721D297D900DE73D5 /* LaunchScreen.storyboard in Resources */,
+				E37BD05A21D41B4800DE73D5 /* CoinCaseTableViewCell.xib in Resources */,
 				E37BCFE821D2709200DE73D5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +554,7 @@
 				E37BCFE121D2709100DE73D5 /* AppDelegate.swift in Sources */,
 				E37BD02921D2778700DE73D5 /* CryptoMarketRouter.swift in Sources */,
 				E37BD02221D2778700DE73D5 /* CryptoCaseInteractor.swift in Sources */,
+				E37BD05B21D41B4800DE73D5 /* CoinCaseTableViewCell.swift in Sources */,
 				E37BD05021D3ABAE00DE73D5 /* UserSettings.swift in Sources */,
 				E37BD02421D2778700DE73D5 /* CryptoCaseRouter.swift in Sources */,
 				E37BD02D21D27F9600DE73D5 /* ModuleFactory.swift in Sources */,

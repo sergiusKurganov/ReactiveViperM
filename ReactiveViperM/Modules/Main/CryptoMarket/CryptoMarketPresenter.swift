@@ -9,7 +9,8 @@
 import Foundation
 import RxSwift
 
-protocol CryptoMarketModuleOutputProtocol {
+protocol CryptoMarketModuleOutputProtocol: class {
+    func didSelectBaseId(_ id: String)
 }
 
 protocol CryptoMarketModuleInputProtocol {
@@ -19,7 +20,7 @@ protocol CryptoMarketModuleInputProtocol {
 
 final class CryptoMarketPresenter {
     
-    var parentModule: CryptoMarketModuleOutputProtocol?
+    weak var parentModule: CryptoMarketModuleOutputProtocol?
     
     weak var view: CryptoMarketViewControllerInputProtocol?
     var interactor: CryptoMarketInteractorInputProtocol?
@@ -40,6 +41,7 @@ extension CryptoMarketPresenter: CryptoMarketInteractorOutputProtocol {
     
     func collectionViewDidSelectMarket(with baseId: String) {
         interactor?.saveBaseId(baseId)
+        parentModule?.didSelectBaseId(baseId)
     }
 }
 

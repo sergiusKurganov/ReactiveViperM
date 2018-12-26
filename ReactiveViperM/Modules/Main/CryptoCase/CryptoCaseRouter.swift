@@ -15,7 +15,6 @@ protocol CryptoCaseRouterOutputProtocol {
 }
 
 final class CryptoCaseRouter {
-    
     var presenter: CryptoCaseRouterOutputProtocol?
     
 }

@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in DataManager.getCryptoMarket(with:success:failure:):DataManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "responseJSON.value ">
+            </PersistentString>
+            <PersistentString
+               value = "parameters">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "MainViewController.setupView():MainViewController.swift">
          <PersistentStrings>
             <PersistentString

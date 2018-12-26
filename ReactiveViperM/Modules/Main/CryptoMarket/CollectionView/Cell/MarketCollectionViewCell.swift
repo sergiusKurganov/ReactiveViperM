@@ -33,7 +33,7 @@ extension MarketCollectionViewCell {
         
         currencyFormatter.usesGroupingSeparator = true
         currencyFormatter.numberStyle = .currency
-        currencyFormatter.maximumFractionDigits = 2
+        currencyFormatter.maximumFractionDigits = 3
         
         var identifier = "en_US"
         switch market.quoteId {
@@ -55,6 +55,7 @@ extension MarketCollectionViewCell {
         
         inlayButton.isUserInteractionEnabled = false
         inlayButton.layer.cornerRadius = 8.0
-        marketImageView.image = UIImage(named: "icon_common_market")
+        let image = UIImage(named: market.baseSymbol)
+        marketImageView.image = image ?? UIImage(named: "icon_common_market")
     }
 }

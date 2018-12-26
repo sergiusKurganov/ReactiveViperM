@@ -15,7 +15,6 @@ protocol CryptoMarketRouterOutputProtocol {
 }
 
 final class CryptoMarketRouter {
-    
     var presenter: CryptoMarketRouterOutputProtocol?
 }
 
