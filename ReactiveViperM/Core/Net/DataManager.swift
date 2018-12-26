@@ -14,12 +14,11 @@ class DataManager {
     
     private init() {}
     static let shared = DataManager()
-    
-    func getCryptoMarket(success: (([Market]) -> Void)? = nil,
+    func getCryptoMarket(with parameters: Parameters, success: (([Market]) -> Void)? = nil,
                          failure: ((String) -> Void)? = nil) {
         Alamofire.request(URL(string: "https://api.coincap.io/v2/markets")!,
                           method: .get,
-                          parameters: [:],
+                          parameters: parameters,
                           headers: nil).responseJSON { responseJSON in
                             switch responseJSON.result {
                             case .success:

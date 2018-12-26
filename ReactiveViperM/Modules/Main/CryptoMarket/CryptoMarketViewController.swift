@@ -16,6 +16,7 @@ protocol CryptoMarketViewControllerInputProtocol: class {
 
 protocol CryptoMarketViewControllerOutputProtocol {
     func viewDidLoad()
+    func collectionViewDidSelectMarket(with baseId: String)
 }
 
 final class CryptoMarketViewController: UIViewController {
@@ -73,7 +74,7 @@ extension CryptoMarketViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //delegate?.orderMaterialItemCellDidTapOnMaterialWith(orderItems[indexPath.row].materialNumber)
+        presenter?.collectionViewDidSelectMarket(with: markets[indexPath.row].baseId)
     }
 }
 

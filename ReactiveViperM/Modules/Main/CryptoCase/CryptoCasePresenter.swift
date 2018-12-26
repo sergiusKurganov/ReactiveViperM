@@ -21,7 +21,7 @@ final class CryptoCasePresenter {
     
     weak var view: CryptoCaseViewControllerInputProtocol?
     var interactor: CryptoCaseInteractorInputProtocol?
-    weak var router: CryptoCaseRouterInputProtocol?
+    var router: CryptoCaseRouterInputProtocol?
     
 }
 

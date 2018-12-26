@@ -24,6 +24,8 @@ class MarketResponse {
             market.priceUsd = data["priceUsd"].doubleValue
             market.rank = data["rank"].intValue
             market.baseSymbol = data["baseSymbol"].stringValue
+            market.priceQuote = data["priceQuote"].doubleValue
+            market.quoteId = CurrencyBuilder.currencyType(for: data["quoteId"].stringValue)
             return market
         }
     }

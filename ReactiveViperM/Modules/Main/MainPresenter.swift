@@ -11,18 +11,22 @@ import Foundation
 final class MainPresenter {
     weak var view: MainViewControllerInputProtocol?
     var interactor: MainInteractorInputProtocol?
-    weak var router: MainRouterInputProtocol?
+    var router: MainRouterInputProtocol?
 }
 
 extension MainPresenter: MainViewControllerOutputProtocol {
     func viewDidLoad() {
         view?.setupView()
-        interactor?.getMarketData()
+        interactor?.getMarketData(currency: .dollar)
     }
     
     func configureMarketModulePresenter(_ presenter: CryptoMarketModuleInputProtocol) {
         presenter.configure(parentModule: self,
                             markets: (interactor?.markets)!)
+    }
+    
+    func currencySegmentControlDidSelectCurrency(_ currency: CurrencyType) {
+        interactor?.getMarketData(currency: currency)
     }
 }
 

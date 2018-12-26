@@ -23,7 +23,7 @@ final class CryptoMarketPresenter {
     
     weak var view: CryptoMarketViewControllerInputProtocol?
     var interactor: CryptoMarketInteractorInputProtocol?
-    weak var router: CryptoMarketRouterInputProtocol?
+    var router: CryptoMarketRouterInputProtocol?
     
 }
 
@@ -37,6 +37,10 @@ extension CryptoMarketPresenter: CryptoMarketInteractorOutputProtocol {
     func updateView(with market: [Market]) {
         view?.markets = market
     }
+    
+    func collectionViewDidSelectMarket(with baseId: String) {
+        interactor?.saveBaseId(baseId)
+    }
 }
 
 extension CryptoMarketPresenter: CryptoMarketRouterOutputProtocol {
@@ -47,6 +51,6 @@ extension CryptoMarketPresenter: CryptoMarketModuleInputProtocol {
                    markets: Variable<[Market]>) {
         guard let module = parentModule else { return }
         self.parentModule = module
-        self.interactor?.market = markets
+        self.interactor?.markets = markets
     }
 }

@@ -9,10 +9,12 @@
 import Foundation
 
 class Market {
-    var baseId: String?
-    var rank: Int?
-    var baseSymbol: String?
-    var priceUsd: Double?
+    var baseId = ""
+    var rank: Int = 0
+    var baseSymbol = ""
+    var priceUsd: Double = 0.0
+    var priceQuote: Double = 0.0
+    var quoteId: CurrencyType = .unknown
 }
 //"id": "bitcoin",
 //"rank": "1",
