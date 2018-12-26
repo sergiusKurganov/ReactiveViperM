@@ -7,38 +7,46 @@
 //
 
 import Foundation
+import RxSwift
 
-protocol CryptoMarketModuleOutputProtocol: class {
+protocol CryptoMarketModuleOutputProtocol {
 }
 
 protocol CryptoMarketModuleInputProtocol {
-    func configure(parentModule: CryptoMarketModuleOutputProtocol?)
+    func configure(parentModule: CryptoMarketModuleOutputProtocol?,
+                   markets: Variable<[Market]>)
 }
 
 final class CryptoMarketPresenter {
     
-    weak var parentModule: CryptoMarketModuleOutputProtocol?
+    var parentModule: CryptoMarketModuleOutputProtocol?
     
     weak var view: CryptoMarketViewControllerInputProtocol?
-    weak var interactor: CryptoMarketInteractorInputProtocol?
+    var interactor: CryptoMarketInteractorInputProtocol?
     weak var router: CryptoMarketRouterInputProtocol?
     
 }
 
 extension CryptoMarketPresenter: CryptoMarketViewControllerOutputProtocol {
     func viewDidLoad() {
+        view?.setupView()
     }
 }
 
 extension CryptoMarketPresenter: CryptoMarketInteractorOutputProtocol {
+    func updateView(with market: [Market]) {
+        view?.markets = market
+    }
 }
 
 extension CryptoMarketPresenter: CryptoMarketRouterOutputProtocol {
 }
 
-extension CryptoMarketPresenter: CryptoMarketModuleOutputProtocol {
-    func configure(parentModule: CryptoMarketModuleOutputProtocol?) {
+extension CryptoMarketPresenter: CryptoMarketModuleInputProtocol {
+    func configure(parentModule: CryptoMarketModuleOutputProtocol?,
+                   markets: Variable<[Market]>) {
         guard let module = parentModule else { return }
         self.parentModule = module
+        self.interactor?.market = markets
     }
 }

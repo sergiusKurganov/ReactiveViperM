@@ -20,7 +20,7 @@ final class CryptoCasePresenter {
     weak var parentModule: CryptoCaseModuleOutputProtocol?
     
     weak var view: CryptoCaseViewControllerInputProtocol?
-    weak var interactor: CryptoCaseInteractorInputProtocol?
+    var interactor: CryptoCaseInteractorInputProtocol?
     weak var router: CryptoCaseRouterInputProtocol?
     
 }

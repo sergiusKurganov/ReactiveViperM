@@ -10,13 +10,19 @@ import Foundation
 
 final class MainPresenter {
     weak var view: MainViewControllerInputProtocol?
-    weak var interactor: MainInteractorInputProtocol?
+    var interactor: MainInteractorInputProtocol?
     weak var router: MainRouterInputProtocol?
 }
 
 extension MainPresenter: MainViewControllerOutputProtocol {
     func viewDidLoad() {
         view?.setupView()
+        interactor?.getMarketData()
+    }
+    
+    func configureMarketModulePresenter(_ presenter: CryptoMarketModuleInputProtocol) {
+        presenter.configure(parentModule: self,
+                            markets: (interactor?.markets)!)
     }
 }
 
@@ -24,4 +30,7 @@ extension MainPresenter: MainInteractorOutputProtocol {
 }
 
 extension MainPresenter: MainRouterOutputProtocol {
+}
+
+extension MainPresenter: CryptoMarketModuleOutputProtocol {
 }
