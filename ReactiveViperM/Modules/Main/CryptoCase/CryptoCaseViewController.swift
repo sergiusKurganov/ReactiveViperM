@@ -10,6 +10,8 @@ import UIKit
 
 protocol CryptoCaseViewControllerInputProtocol: class {
     func setupView()
+    func reloadTableView()
+    func addRowsAtIndex(_ index: Int)
     
     var caseMarkets: [Market] { get set }
 }
@@ -21,11 +23,7 @@ protocol CryptoCaseViewControllerOutputProtocol {
 final class CryptoCaseViewController: UIViewController {
     
     var presenter: CryptoCaseViewControllerOutputProtocol?
-    var caseMarkets = [Market]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    var caseMarkets = [Market]()
     
     private var tableView = UITableView(frame: .zero)
     private var coinCaseIdentifier = "CoinCaseIdentifier"
@@ -45,6 +43,17 @@ final class CryptoCaseViewController: UIViewController {
 extension CryptoCaseViewController: CryptoCaseViewControllerInputProtocol {
     func setupView() {
         cnofigureInterface()
+    }
+    
+    func reloadTableView() {
+        tableView.reloadData()
+    }
+    
+    func addRowsAtIndex(_ index: Int) {
+        let indexPath: IndexPath = IndexPath(item: index, section: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [indexPath], with: .bottom)
+        tableView.endUpdates()
     }
 }
 

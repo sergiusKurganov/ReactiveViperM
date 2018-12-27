@@ -35,7 +35,14 @@ extension CryptoCasePresenter: CryptoCaseViewControllerOutputProtocol {
 
 extension CryptoCasePresenter: CryptoCaseInteractorOutputProtocol {
     func updateView(with caseMarkets: [Market]) {
-        view?.caseMarkets = caseMarkets
+        guard let unwrappedView = view else { return }
+        if unwrappedView.caseMarkets.count == 0 || unwrappedView.caseMarkets.first?.quoteId != caseMarkets.first?.quoteId {
+            unwrappedView.caseMarkets = caseMarkets
+            unwrappedView.reloadTableView()
+        } else if !unwrappedView.caseMarkets.contains(where: { $0.baseId == caseMarkets.first?.baseId }) {
+            view?.caseMarkets.insert(caseMarkets.first!, at: 0)
+            view?.addRowsAtIndex(0)
+        }
     }
 }
 

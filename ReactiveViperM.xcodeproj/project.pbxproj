@@ -266,7 +266,7 @@
 		E37BD03821D2B58B00DE73D5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E37BD04021D2C7CD00DE73D5 /* Model */,
+				E37BD04021D2C7CD00DE73D5 /* Entity */,
 				E37BD05121D3ABB500DE73D5 /* Local */,
 				E37BD03921D2B5A700DE73D5 /* Net */,
 			);
@@ -299,12 +299,12 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
-		E37BD04021D2C7CD00DE73D5 /* Model */ = {
+		E37BD04021D2C7CD00DE73D5 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				E37BD04121D2C7E200DE73D5 /* Market.swift */,
 			);
-			path = Model;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		E37BD04521D2E36600DE73D5 /* CollectionView */ = {
